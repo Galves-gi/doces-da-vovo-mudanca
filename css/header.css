@@ -27,7 +27,7 @@ header>img {
     padding-left: 40px;
 }
 
-ul {
+.menu {
     display: flex;
     flex-direction: row;
     gap: 5vw;
@@ -35,7 +35,7 @@ ul {
     padding-right: 40px;
 }
 
-a {
+.menu a {
     color:#000000;
     text-decoration: none;
     font-size: 2.5rem;
@@ -61,11 +61,11 @@ header>button {
     color: #000000;
 }
 @media (min-width:300px) and (max-width:800px) {
-    ul {
+    .menu {
         display: none;
     }
 
-    ul.active {
+    .menu.active {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -76,9 +76,14 @@ header>button {
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: #ffbca2;
+        background-color: #FCCFBE;
         z-index: 1000;
 
+    }
+    header>img {
+        min-width: 20%;
+        height: auto;
+        padding-left: 40px;
     }
 
     header>button {
