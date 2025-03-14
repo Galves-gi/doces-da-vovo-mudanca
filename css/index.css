@@ -233,7 +233,7 @@ footer h5{
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         gap: 5px;
     }
 
@@ -243,6 +243,7 @@ footer h5{
     }
 
     .mkt-titulo {
+        font-size: 2.8rem;
         margin-bottom: 5%;
     }
 
@@ -262,6 +263,9 @@ footer h5{
 
     .card{
         gap: 2vw;
+    }
+    .card-produto{
+        max-height: 60%; 
     }
     .card-produto>img {
         max-width: 90%;
