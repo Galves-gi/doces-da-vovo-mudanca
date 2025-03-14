@@ -224,7 +224,7 @@ footer h5{
 
 @media (min-width:300px) and (max-width:800px) {
     main {
-        padding: 5vw;
+        padding: 2vw;
         height: 100%;
 
     }
@@ -260,7 +260,9 @@ footer h5{
     }
 
 
-
+    .card{
+        gap: 2vw;
+    }
     .card-produto>img {
         max-width: 90%;
         max-height: 90%;
