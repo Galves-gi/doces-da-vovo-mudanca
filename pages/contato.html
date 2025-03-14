@@ -40,13 +40,10 @@
                     Sábados e feriados das 11h às 18h<br>
                     <span class="text-red">Segunda: Fechado</span>
                 </p>
-                <br><br>
-                <h4>Doces da Vovó - Pampulha:</h4>
                 <p>
-                    Endereço: Rua Gonçalves Dias, 32 - Centro<br>
-                    terças, quartas, quintas e sextas das 11h às 18h<br>
-                    Sábados e feriados das 11h às 18h<br>
-                    <span class="text-red">Segunda: Fechado</span>
+                    <i class="bi bi-instagram"></i> Docesdavovo<br>
+                    <i class="bi bi-whatsapp"></i>31 33333-4444<br>
+                    <i class="bi bi-twitter-x"></i> Docesdavovo
                 </p>
             </div>
             <iframe
@@ -57,16 +54,18 @@
 
         <section class="form">
             <h1 class="titulo">Entre em Contato</h1>
-            <form>
-                <label for="name">Nome</label>
-                <input type="text" name="nome" id="name">
+            <form onsubmit="return validaCampos(event)">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
 
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email">
 
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="4" cols="50"
-                    placeholder="Digite a sua mensagem aqui ..."></textarea>
+                    placeholder="Digite a sua mensagem aqui ...">
+                </textarea>
+
 
                 <button type="submit" class="form-btn">Enviar</button>
             </form>
@@ -93,6 +92,7 @@
     </footer>
 
     <script src="/doces-da-vovo/js/header.js"></script>
+    <script src="/doces-da-vovo/js/validacao.js"></script>
 </body>
 
 </html>

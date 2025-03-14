@@ -22,6 +22,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 10%;
     width: 40%;
     height: 80%;
     padding: 0;
@@ -30,7 +31,6 @@ main {
 
 .mkt-titulo {
     font-size: 5rem;
-    margin-bottom: 15%;
     font-family: "Carattere", cursive;
     font-weight: 400;
 }
@@ -39,7 +39,6 @@ main {
     font-size: 1.5rem;
     text-align: justify;
     word-wrap: break-word;
-    margin-bottom: 35%;
 }
 
 .mkt-btn {
@@ -237,7 +236,7 @@ footer h5{
 
 @media (min-width:300px) and (max-width:800px) {
     main {
-        padding: 2vw;
+        padding: 3vw;
         height: 100%;
 
     }
@@ -259,11 +258,9 @@ footer h5{
         text-align: center;
         font-size: 2.8rem;
         word-wrap: break-word;
-        margin: 3% 0;
     }
 
     .mkt-text {
-        margin-bottom: 15%;
     }
 
     .mkt-btn {
