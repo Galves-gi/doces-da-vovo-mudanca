@@ -34,7 +34,7 @@ header {
 header>img {
     width: 10%;
     height: auto;
-    padding-left: 40px;
+    padding: 40px 0;
 }
 
 .menu {
@@ -94,13 +94,14 @@ header>button {
     }
 
     header>img {
-        min-width: 20%;
-        height: auto;
+        min-height: 40%;
+        padding: 0;
 
     }
 
     header>button {
         display: block;
         z-index: 1001;
+        padding: 0;
     }
 }

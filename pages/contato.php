@@ -32,10 +32,10 @@ if ($form_submitted) {
     <link
         href="https://fonts.googleapis.com/css2?family=Carattere&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/doces-da-vovo-mudanca/css/header.css">
-    <link rel="stylesheet" href="/doces-da-vovo-mudanca/css/index.css">
-    <link rel="stylesheet" href="/doces-da-vovo-mudanca/css/contato.css">
-    <link rel="shortcut icon" href="/doces-da-vovo-mudanca/assets/logo3.png" type="image/x-icon">
+    <link rel="stylesheet" href="/doces-da-vovo/css/header.css">
+    <link rel="stylesheet" href="/doces-da-vovo/css/index.css">
+    <link rel="stylesheet" href="/doces-da-vovo/css/contato.css">
+    <link rel="shortcut icon" href="/doces-da-vovo/assets/logo3.png" type="image/x-icon">
 
 
 
@@ -44,12 +44,12 @@ if ($form_submitted) {
 
 <body>
     <header>
-        <img src="/doces-da-vovo-mudanca/assets/logo3.png" alt="logo doces da vovó">
+        <img rc="/doces-da-vovo/assets/logo3.png" alt="logo doces da vovó">
         <ul class="menu">
-            <li><a href="/doces-da-vovo-mudanca/index.html">Início</a></li>
-            <li><a href="/doces-da-vovo-mudanca/#produto">Produto</a></li>
-            <li><a href="/doces-da-vovo-mudanca/pages/historia.html">Nossa História</a></li>
-            <li><a href="/doces-da-vovo-mudanca/pages/contato.html">Contato</a></li>
+            <li><a href="/doces-da-vovo/index.html">Início</a></li>
+            <li><a href="/doces-da-vovo/#produto">Produto</a></li>
+            <li><a href="/doces-da-vovo/pages/historia.html">Nossa História</a></li>
+            <li><a href="/doces-da-vovo/pages/contato.html">Contato</a></li>
         </ul>
         <button onclick="trocarMenu()"><i id="icon" class="bi bi-list"></i></button>
     </header>
@@ -151,8 +151,8 @@ if ($form_submitted) {
 
     </footer>
 
-    <script src="/doces-da-vovo-mudanca/js/header.js"></script>
-    <script src="/doces-da-vovo-mudanca/js/validacao.js"></script>
+    <script rc="/doces-da-vovo/js/header.js"></script>
+    <script rc="/doces-da-vovo/js/validacao.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
