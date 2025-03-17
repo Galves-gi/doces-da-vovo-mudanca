@@ -38,3 +38,9 @@ function validaCampos(Event) {
     return true;
 
 }
+
+/* if (!nome || !email || !mensagem) {
+    alert("Todos os campos devem ser preenchidos!");
+    event.preventDefault();  // Impede o envio do formulário
+    return false;
+} */
