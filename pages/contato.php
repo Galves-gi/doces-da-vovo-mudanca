@@ -1,22 +1,46 @@
 <?php
-session_start(); // Iniciar a sessão
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "formulario";
 
-// Verificar se os dados da sessão estão definidos
-$nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : '';
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-$mensagem = isset($_SESSION['mensagem']) ? $_SESSION['mensagem'] : '';
+// Cria conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar se o formulário foi enviado com sucesso (flag)
-$form_submitted = isset($_SESSION['form_submitted']) ? $_SESSION['form_submitted'] : false;
+// Checa a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
 
-// Limpar os dados da sessão após usá-los
-unset($_SESSION['nome'], $_SESSION['email'], $_SESSION['mensagem']);
+$erro = ""; // Variável para armazenar mensagens de erro
+$sucesso = ""; // Variável para armazenar mensagem de sucesso
 
-// Limpar a flag de envio após exibição
-if ($form_submitted) {
-    unset($_SESSION['form_submitted']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Coleta os dados do formulário
+    $nome = htmlspecialchars($_POST['nome']);
+    $email = htmlspecialchars($_POST['email']);
+    $mensagem = htmlspecialchars($_POST['mensagem']);
+
+    // Preparação para inserção no banco de dados
+    $sql = "INSERT INTO tb_contato (nome, email, mensagem) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $nome, $email, $mensagem);
+
+    // Verifica se a inserção foi bem-sucedida
+    if ($stmt->execute()) {
+        // Mensagem de sucesso
+        $sucesso = "Dados enviados com sucesso!";
+    } else {
+        // Caso haja erro, exibe uma mensagem de erro
+        $erro = "Erro ao enviar os dados: " . $stmt->error;
+    }
+
+    // Fecha a declaração e a conexão
+    $stmt->close();
+    $conn->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,9 +48,6 @@ if ($form_submitted) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
     <link
@@ -36,8 +57,6 @@ if ($form_submitted) {
     <link rel="stylesheet" href="/doces-da-vovo/css/index.css">
     <link rel="stylesheet" href="/doces-da-vovo/css/contato.css">
     <link rel="shortcut icon" href="/doces-da-vovo/assets/logo3.png" type="image/x-icon">
-
-
 
     <title>Doces da Vovó - Contato</title>
 </head>
@@ -54,8 +73,7 @@ if ($form_submitted) {
         <button onclick="trocarMenu()"><i id="icon" class="bi bi-list"></i></button>
     </header>
 
-    <main class="container">
-
+    <main>
         <h1 class="titulo">Visite a Doces da Vovó e experimente o sabor da tradição!</h1>
 
         <section class="mkt">
@@ -81,7 +99,10 @@ if ($form_submitted) {
 
         <section class="form">
             <h1 class="titulo">Entre em Contato</h1>
-            <form action="../php/formulario.php" method="post" onsubmit="return validaCampos(event)">
+            <!-- Exibe mensagens de erro -->
+            <p id="erro-msg" class="erro" style="display:none;"></p>
+
+            <form id="formContato" method="post" action="contato.php">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
 
@@ -89,46 +110,34 @@ if ($form_submitted) {
                 <input type="email" name="email" id="email">
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite a sua mensagem aqui ...">
-                </textarea>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite a sua mensagem aqui ..."></textarea>
 
                 <button type="submit" id="enviarDados" class="form-btn">Enviar</button>
             </form>
         </section>
 
+        <section class="display-flex-center margem">
+            <?php
+            // Exibe os dados enviados após o envio do formulário
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($sucesso)) {
+                // Exibe os dados
+                echo "<div class='dados-enviados'>";
+                echo "<h2 class='titulo'>Dados Enviados:</h2>";
+                echo "<p><strong>Nome:</strong> $nome</p>";
+                echo "<p><strong>E-mail:</strong> $email</p>";
+                echo "<p><strong>Mensagem:</strong> $mensagem</p>";
+                echo "<button class='fechar-btn form-btn' onclick='fecharDados()'>Fechar</button>";
+                echo "</div>";
+            } else {
+                // Exibe mensagem de erro se houver
+                if (isset($erro)) {
+                    echo "<p class='erro'>$erro</p>";
+                }
+            }
+            ?>
+        </section>
+
         <button class="btn-zap"><a href="https://wa.me/5531982606419"><i class="bi bi-whatsapp"></i></a></i></button>
-
-
-        <?php if ($form_submitted): ?>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Dados Enviados</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome); ?></p>
-                            <p><strong>E-mail:</strong> <?php echo htmlspecialchars($email); ?></p>
-                            <p><strong>Mensagem:</strong> <?php echo nl2br(htmlspecialchars($mensagem)); ?></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                // Exibir o modal automaticamente
-                $(document).ready(function() {
-                    $('#exampleModal').modal('show');
-                });
-            </script>
-        <?php endif; ?>
     </main>
 
     <footer>
@@ -146,20 +155,8 @@ if ($form_submitted) {
         <h5>Todos os direitos reservados.</h5>
     </footer>
 
-    <script rc="/doces-da-vovo/js/header.js"></script>
-    <script rc="/doces-da-vovo/js/validacao.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-
+    <script src="/doces-da-vovo/js/header.js"></script>
+    <script src="/doces-da-vovo/js/validar.js"></script>
 </body>
 
 </html>

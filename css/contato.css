@@ -17,7 +17,6 @@
     justify-content: center;
     align-items: center;
     background-color: #fff8f4;
-
 }
 
 form {
@@ -61,9 +60,35 @@ form>input {
         color: black;
     }
 }
-
+.dados-enviados{
+    width: 50%;
+    height: auto;
+   
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px; 
+    padding:5% ;
+    background-color: #FCCFBE;
+}
+.dados-enviados h2{
+    text-align: center;
+}
+.display-flex-center{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.margem{
+    margin: 5% 0;
+}
 @media (min-width:300px) and (max-width:800px) {
     form {
+        width: 100%;
+    }
+    .dados-enviados {
         width: 100%;
     }
 }
