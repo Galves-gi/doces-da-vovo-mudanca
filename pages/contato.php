@@ -44,7 +44,7 @@ if ($form_submitted) {
 
 <body>
     <header>
-        <img rc="/doces-da-vovo/assets/logo3.png" alt="logo doces da vovó">
+        <img src="/doces-da-vovo/assets/logo3.png" alt="logo doces da vovó">
         <ul class="menu">
             <li><a href="/doces-da-vovo/index.html">Início</a></li>
             <li><a href="/doces-da-vovo/#produto">Produto</a></li>
@@ -131,10 +131,7 @@ if ($form_submitted) {
         <?php endif; ?>
     </main>
 
-
-
-
-    <footer><!--
+    <footer>
         <div class="footer-icon">
             <i class="bi bi-instagram"></i>
             <i class="bi bi-whatsapp"></i>
@@ -147,8 +144,6 @@ if ($form_submitted) {
             <li><a href="pages/contato.html">Contato</a></li>
         </ul>
         <h5>Todos os direitos reservados.</h5>
--->
-
     </footer>
 
     <script rc="/doces-da-vovo/js/header.js"></script>

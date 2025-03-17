@@ -1,296 +1,286 @@
 main {
-    padding: 0 15vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff8f4;
-
+  padding: 0 15vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff8f4;
 }
 
 .mkt {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    gap: 10%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  gap: 10%;
+  margin: 5vh 0;
 }
 
 .mkt-box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10%;
-    width: 40%;
-    height: 80%;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10%;
+  width: 40%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
 }
 
 .mkt-titulo {
-    font-size: 5rem;
-    font-family: "Carattere", cursive;
-    font-weight: 400;
+  font-size: 5rem;
+  font-family: "Carattere", cursive;
+  font-weight: 400;
 }
 
 .mkt-text {
-    font-size: 1.5rem;
-    text-align: justify;
-    word-wrap: break-word;
+  font-size: 1.5rem;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
 .mkt-btn {
-    max-width: 40vw;
-    height: 8vh;
-    margin-top: 4vh;
-    background-color: #bb826d;
-    border: 0.5px solid black;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: bold;
+  max-width: 40vw;
+  height: 8vh;
+  margin-top: 4vh;
+  background-color: #bb826d;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
 
-    &:hover {
-        transition: 0.3s ease;
-        background-color: #FFBCA2;
-        color: black;
-    }
+  &:hover {
+    transition: 0.3s ease;
+    background-color: #ffbca2;
+    color: black;
+  }
 }
 
 .mkt-img {
-    width: 45%;
-    height: 60vh;
-    border-radius: 20px;
-    margin-top: 5vh;
-
+  width: 45%;
+  height: 60vh;
+  border-radius: 20px;
 }
 
 .titulo {
-    width: 100%;
-    font-size: 2.8rem;
-    text-align: center;
-    margin: 3% 0;
-    font-family: "Carattere", cursive;
-    font-weight: 400;
-    font-style: normal;
+  width: 100%;
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 3% 0;
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 30px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
 }
 
 .card-produto {
-    width: 250px;
-    height: 350px;
-    background-color: #FFBCA2;
-    border: 1px solid black;
-    border-radius: 10px;
-    flex: 30%;
+  width: 250px;
+  height: 350px;
+  background-color: #ffbca2;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex: 30%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5vh;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding: 10px;
 
-    position: relative;
-    transition: transform 0.8s;
+  position: relative;
+  transition: transform 0.8s;
 
-    &:hover {
-        
-        
-    }
-
+  &:hover {
+  }
 }
 
 .card-produto_back:hover {
-    opacity: 10;
-    z-index: 10;
-    background-color: #bb826d;
-
+  opacity: 10;
+  z-index: 10;
+  background-color: #bb826d;
 }
 
-.card-produto>img {
-    max-width: 80%;
-    min-height: 60%;
-    margin-top: 30px;
-    border-radius: 10px;
+.card-produto > img {
+  max-width: 80%;
+  min-height: 60%;
+  margin-top: 30px;
+  border-radius: 10px;
 }
 
 .card-titulo {
-    width: 100%;
-    height: 100%;
-    font-size: 1.5rem;
-    text-align: center;
-    word-wrap: break-word;
-
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .card-text {
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    text-align: center;
-    word-wrap: break-word;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  word-wrap: break-word;
 
-    &:hover {
-        display: flex;
-        color: red;
-    }
+  &:hover {
+    display: flex;
+    color: red;
+  }
 }
 
-
-.missao{
-    align-self: center;
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    padding: 5vw;
-
+.missao {
+  align-self: center;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  padding: 5vw;
 }
 
-.card-produto p{
-    text-align: center;
+.card-produto p {
+  text-align: center;
 }
 
 .btn-zap {
-    border: none;
-    background-color: transparent;
-    font-size: 3.5rem;
-    color: green;
-    text-align: end;
+  border: none;
+  background-color: transparent;
+  font-size: 3.5rem;
+  color: green;
+  text-align: end;
 
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
 
-    position: fixed;
-    right: 5%;
-    bottom: 10%;
-
-    animation-name: btnZap;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  animation-name: btnZap;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes btnZap {
-    0% {
-        font-size: 4rem;
-    }
+  0% {
+    font-size: 4rem;
+  }
 
-    50% {
-        font-size: 4.8rem;
-    }
-
+  50% {
+    font-size: 4.8rem;
+  }
 }
 
 footer {
-    width: 100%;
-    height: 10vh;
-    background-color: #bb826d;
+  width: 100%;
+  height: 100%;
+  background-color: #bb826d;
 
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-    justify-content:end;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: end;
+  padding: 20px 0 0 0;
 }
-.footer-icon .bi{
-    margin-left: 10px;
+.footer-icon .bi {
+  margin-left: 10px;
 }
 .footer-menu {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 50px;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+  list-style: none;
 }
 
 .footer-menu a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: "Carattere", cursive;
-    font-weight: 400;
-    font-style: normal;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
 
-    &:hover {
-        transition: 0.2s ease;
-        font-size: 2rem;
-    }
+  &:hover {
+    transition: 0.2s ease;
+    font-size: 2rem;
+  }
 }
-footer h5{
+footer h5 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #ffbca2;
+  color: #000000;
+  font-size: small;
+  font-weight: bold;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+  main {
+    padding: 3vw;
+    height: 100%;
+  }
+  .reverso-coluna_sm {
+    flex-direction: column-reverse;
+  }
+  .mkt {
+    flex-wrap: wrap;
     width: 100%;
+    height: 100%;
+    gap: 5px;
+  }
+
+  .mkt-box {
+    width: 100%;
+    max-height: 55%;
+    margin-bottom: 6vh;
+  }
+
+  .mkt-titulo {
     text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-}
+    font-size: 2.8rem;
+    word-wrap: break-word;
+  }
 
-@media (min-width:300px) and (max-width:800px) {
-    main {
-        padding: 3vw;
-        height: 100%;
+  .mkt-btn {
+    align-self: center;
+    width: 60vw;
+  }
 
-    }
-    .reverso-coluna_sm{
-        flex-direction: column-reverse;
-    }
-    .mkt {
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-        gap: 5px;
-
-    }
-
-    .mkt-box {
-        width: 100%;
-        max-height: 55%;
-        margin-bottom: 6vh;
-    }
-
-    .mkt-titulo {
-        text-align: center;
-        font-size: 2.8rem;
-        word-wrap: break-word;
-    }
-
-    .mkt-btn {
-        align-self: center;
-        width: 60vw;
-    }
-
-    .mkt-img {
-        width: 100%;
-        height: 30%;
-
-    }
-
-
-    .card{
-        gap: 2vw;
-    }
-    .card-produto{
-        max-height: 60%; 
-    }
-    .card-produto>img {
-        max-width: 90%;
-        max-height: 90%;
-        margin-top: 5%;
-    }
-}
-.missao{
+  .mkt-img {
     width: 100%;
+    height: 30%;
+  }
+
+  .card {
+    gap: 2vw;
+  }
+  .card-produto {
+    max-height: 60%;
+  }
+  .card-produto > img {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 5%;
+  }
+  .missao {
+    width: 100%;
+  }
+  .footer-menu {
+    flex-direction: column;
+    gap: 5vw;
+  }
 }

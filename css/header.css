@@ -4,6 +4,8 @@
     font-family: "Cardo", serif;
     font-weight: 400;
     font-style: normal;
+    transition: 0.2s ease;
+    scroll-behavior: smooth;
 }
 
 .fonte-carattere {
@@ -94,14 +96,14 @@ header>button {
     }
 
     header>img {
-        min-height: 40%;
-        padding: 0;
+        width: 20vw;
+        padding: 3vw; 
 
     }
 
     header>button {
         display: block;
         z-index: 1001;
-        padding: 0;
+        padding: 3vw;
     }
 }
