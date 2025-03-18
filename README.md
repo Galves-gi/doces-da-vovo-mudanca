@@ -24,7 +24,7 @@ Para realizar este projeto é necessário conhecimentos nas linguagem de JavaScr
 ## Instalação
 Para rodar este projeto localmente, siga os passos abaixo:
 
-1. Clona repositório dentro da pasta c:\xampp\htdocs\:
+1. Clonar repositório dentro da pasta c:\xampp\htdocs\:
 ```bash
 git clone https://github.com/gi-alves/doces-da-vovo
 ```
