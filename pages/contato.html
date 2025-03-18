@@ -55,7 +55,8 @@
 
         <section class="form">
             <h1 class="titulo">Entre em Contato</h1>
-            <form onsubmit="return validaCampos(event)">
+            <p id="erro-msg" class="erro" style="display:none;"></p>
+            <form id="formContato" method="post">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
 
@@ -63,10 +64,9 @@
                 <input type="email" name="email" id="email">
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50"
-                    placeholder="Digite a sua mensagem aqui ...">
-                </textarea>
-                <button type="submit" class="form-btn">Enviar</button>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite a sua mensagem aqui ..."></textarea>
+
+                <button type="submit" id="enviarDados" class="form-btn">Enviar</button>
             </form>
         </section>
 
