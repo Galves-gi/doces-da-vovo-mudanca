@@ -45,7 +45,7 @@ main {
   max-width: 40vw;
   height: 8vh;
   margin-top: 4vh;
-  background-color: #bb826d;
+  background-color: #e4c5bf;
   border: 0.5px solid black;
   border-radius: 10px;
   font-size: large;
@@ -89,8 +89,8 @@ main {
 .card-produto {
   width: 250px;
   height: 350px;
-  background-color: #ffbca2;
-  border: 1px solid black;
+  background-color: #e4c5bf;
+  border: 1px solid #500a0a;
   border-radius: 10px;
   flex: 30%;
 
@@ -182,7 +182,7 @@ main {
 footer {
   width: 100%;
   height: 100%;
-  background-color: #bb826d;
+  background-color: #500a0a;
 
   display: flex;
   align-items: center;
@@ -194,6 +194,7 @@ footer {
 }
 .footer-icon .bi {
   margin-left: 10px;
+  color: #e4c5bf;
 }
 .footer-menu {
   display: flex;
@@ -206,7 +207,7 @@ footer {
 }
 
 .footer-menu a {
-  color: #000000;
+  color: #e4c5bf;
   text-decoration: none;
   font-size: 1.5rem;
   font-family: "Carattere", cursive;

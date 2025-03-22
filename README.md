@@ -11,7 +11,7 @@ As cores utilizadas:
 - #fff8f4;
 - #bb826d;
 - #fff8f4;
-- #fccfbe;
+- #500a0a;
 
 As fonts utilizadas
 As fontes foram obtidas no [Google](https://www.bing.com/ck/a?!&&p=355f126c3574215cae20b9d21460f67c5fa6fe47af7e02d63d06cfaef7110c44JmltdHM9MTc0MjE2OTYwMA&ptn=3&ver=2&hsh=4&fclid=1e41393c-85c0-67c9-3553-2c9b84ec66b9&psq=google+fonts&u=a1aHR0cHM6Ly9mb250cy5nb29nbGUuY29tLw&ntb=1):
@@ -24,7 +24,7 @@ Para realizar este projeto é necessário conhecimentos nas linguagem de JavaScr
 ## Instalação
 Para rodar este projeto localmente, siga os passos abaixo:
 
-1. Clonar repositório dentro da pasta c:\xampp\htdocs\:
+1. Clona repositório dentro da pasta c:\xampp\htdocs\:
 ```bash
 git clone https://github.com/gi-alves/doces-da-vovo
 ```

@@ -16,6 +16,10 @@
 
 p {
     font-size: 1.5rem;
+    color: #500a0a;
+}
+h1,h2,h2{
+    color: #500a0a;
 }
 
 header {
@@ -26,7 +30,7 @@ header {
     height: 20vh;
     width: 100%;
 
-    background-color: #FCCFBE;
+    background-color: #500a0a;
 
     position: sticky;
     top: 0;
@@ -48,7 +52,7 @@ header>img {
 }
 
 .menu a {
-    color: #000000;
+    color: #e4c5bf;
     text-decoration: none;
     font-size: 2.5rem;
     font-family: "Carattere", cursive;
@@ -64,7 +68,7 @@ header>img {
 header>button {
     display: none;
     font-size: 3rem;
-    color: #000000;
+    color: #e4c5bf;
     border: none;
     background-color: transparent;
     padding-right: 40px;
@@ -90,7 +94,7 @@ header>button {
         top: 10vh;
         width: 100%;
         height: 100%;
-        background-color: #FCCFBE;
+        background-color: #500a0a;
         z-index: 1000;
 
     }
